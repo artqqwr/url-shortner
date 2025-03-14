@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Redirecting</title>
+    <meta http-equiv="refresh" content="3;url=${originalUrl}" />
+</head>
+<body>
+    <p>Redirecting to <a th:href="${originalUrl}" th:text="${originalUrl}">link</a>...</p>
+</body>
+</html>

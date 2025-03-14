@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>URL Shortener</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+</head>
+<body>
+    <h1>URL Shortener</h1>
+
+    <form action="/create" method="post">
+        <label for="originalUrl">Original URL:</label>
+        <input type="text" id="originalUrl" name="originalUrl" required />
+
+        <label for="expiryDate">Expiry Date (yyyy-MM-ddTHH:mm):</label>
+        <input type="datetime-local" id="expiryDate" name="expiryDate" required />
+
+        <button type="submit">Create Short URL</button>
+    </form>
+
+    <div th:if="${message != null}">
+        <p th:text="${message}"></p>
+    </div>
+</body>
+</html>
